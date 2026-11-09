@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | นุศรา สถิตย์</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background: #f0f7ff;
+    color: #29445f;
+    line-height: 1.8;
+}
+
+header {
+    background: linear-gradient(135deg, #75baff, #b8ddff);
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #245b91;
+}
+
+.hero {
+    min-height: 450px;
+    padding: 90px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #d9edff, #f5faff);
+}
+
+.hero .small {
+    color: #438cc9;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 7vw, 55px);
+    color: #286ba8;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #568ab9;
+}
+
+.hero p {
+    margin-top: 18px;
+    max-width: 650px;
+    color: #57738e;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 28px;
+    background: #428ed0;
+    color: white;
+    padding: 11px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #245b91;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 65px 10%;
+    scroll-margin-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #327cb9;
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #91bde3;
+    font-weight: 400;
+}
+
+.about-box {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(70,130,180,0.09);
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-box p {
+    margin: 9px 0;
+}
+
+.highlight {
+    color: #3989c9;
+    font-weight: 600;
+}
+
+.education {
+    background: #e2f1ff;
+}
+
+.education-box {
+    background: white;
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 18px;
+    border-left: 6px solid #6eb4ed;
+}
+
+.education-box h3 {
+    color: #327cb9;
+    margin-bottom: 15px;
+}
+
+.activity-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.activity-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    margin-bottom: 22px;
+    border-left: 5px solid #75baff;
+    box-shadow: 0 4px 15px rgba(70,130,180,0.08);
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-4px);
+}
+
+.activity-card h3 {
+    color: #327cb9;
+    margin-bottom: 10px;
+}
+
+.number {
+    color: #8abde7;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.skills {
+    background: #e2f1ff;
+}
+
+.skills-box {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.skill-item {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(70,130,180,0.08);
+    transition: 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.skill-item h3 {
+    color: #327cb9;
+    font-size: 17px;
+}
+
+.goal-box {
+    max-width: 850px;
+    margin: auto;
+    background: linear-gradient(135deg, #d9edff, #f5faff);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.goal-box h3 {
+    color: #327cb9;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.goal-box p {
+    text-align: left;
+}
+
+.quote {
+    margin-top: 25px;
+    color: #428ed0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+footer {
+    background: #367eb8;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+    .about-box,
+    .goal-box {
+        padding: 25px 20px;
+    }
+
+    .activity-card {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NU SARA | PORTFOLIO</div>
+    <nav>
+        <a href="#home">หน้าแรก</a>
+        <a href="#about">ประวัติส่วนตัว</a>
+        <a href="#education">การศึกษา</a>
+        <a href="#activities">กิจกรรม</a>
+        <a href="#skills">ทักษะ</a>
+        <a href="#goal">เป้าหมาย</a>
+    </nav>
+</header>
+
+<!-- หน้าแรก -->
+<div class="hero" id="home">
+    <div class="small">WELCOME TO MY PORTFOLIO</div>
+    <h1>นุศรา สถิตย์</h1>
+    <h2>ความฝันของฉัน คือการเป็นครูภาษาไทย</h2>
+    <p>
+        ยินดีต้อนรับเข้าสู่เว็บไซต์แนะนำตัวและรวบรวมประสบการณ์
+        ความสามารถ ตลอดจนเป้าหมายในการศึกษาต่อของดิฉัน
+    </p>
+    <a href="#about" class="hero-btn">ทำความรู้จักฉัน</a>
+</div>
+
+<!-- ประวัติส่วนตัว -->
+<section id="about">
+    <h2 class="section-title">
+        ประวัติส่วนตัว
+        <span>ABOUT ME</span>
+    </h2>
+
+    <div class="about-box">
+        <p><span class="highlight">ชื่อ-นามสกุล :</span> นางสาวนุศรา สถิตย์</p>
+        <p><span class="highlight">ชื่อเล่น :</span> นุศรา</p>
+        <p><span class="highlight">ระดับการศึกษา :</span> มัธยมศึกษาปีที่ 6</p>
+        <p><span class="highlight">สถานศึกษา :</span> โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+        <p><span class="highlight">ความใฝ่ฝัน :</span> ครูภาษาไทย</p>
+        <p><span class="highlight">ความสนใจ :</span> ภาษาไทย วรรณคดี และวรรณกรรมไทย</p>
+    </div>
+</section>
+
+<!-- ประวัติการศึกษา -->
+<section class="education" id="education">
+    <h2 class="section-title">
+        ประวัติการศึกษา
+        <span>EDUCATION</span>
+    </h2>
+
+    <div class="education-box">
+        <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+        <p><strong>สถานศึกษา :</strong> โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+        <p><strong>ระดับชั้น :</strong> มัธยมศึกษาปีที่ 6</p>
+        <p><strong>เป้าหมายการศึกษาต่อ :</strong> มหาวิทยาลัยราชภัฏสุราษฎร์ธานี</p>
+        <p><strong>คณะ :</strong> คณะมนุษยศาสตร์และสังคมศาสตร์</p>
+        <p><strong>สาขาวิชา :</strong> ภาษาไทย</p>
+    </div>
+</section>
+
+<!-- กิจกรรม -->
+<section id="activities">
+    <h2 class="section-title">
+        กิจกรรมที่เข้าร่วม
+        <span>ACTIVITIES</span>
+    </h2>
+
+    <div class="activity-container">
+
+        <div class="activity-card">
+            <h3><span class="number">01</span> กิจกรรมสวดโอ้เอ้วิหารราย</h3>
+            <p>
+                ได้เข้าร่วมโครงการอบรมฝึกหัดสวดโอ้เอ้วิหารราย
+                กับกรมศาสนา ประจำปี พ.ศ. ๒๕๖๘
+                ณ วัดพระมหาธาตุ จังหวัดนครศรีธรรมราช
+                เพื่อเรียนรู้ภูมิปัญญาทางภาษาและสืบสาน
+                วัฒนธรรมไทยโบราณ
+            </p>
+        </div>
+
+        <div class="activity-card">
+            <h3><span class="number">02</span> กิจกรรมประกวดเขียนเรียงความ</h3>
+            <p>
+                เข้าร่วมกิจกรรมเขียนเรียงความ ภายใต้หัวข้อ
+                “โตไปไม่พึ่งยาเสพติด ตามแนวคิด TO BE NUMBER ONE”
+                ในงานมหกรรมรวมพลสมาชิกชมรม TO BE NUMBER ONE
+                อำเภอทุ่งใหญ่ ครั้งที่ ๑
+            </p>
+        </div>
+
+        <div class="activity-card">
+            <h3><span class="number">03</span> กิจกรรมกีฬาสีภายในโรงเรียน</h3>
+            <p>
+                เข้าร่วมกิจกรรมกีฬาสีภายในโรงเรียนในบทบาทสตาฟกองเชียร์
+                รับผิดชอบการประสานงาน ดูแลความพร้อมของกองเชียร์
+                และร่วมสร้างบรรยากาศแห่งความสามัคคีและความคิดสร้างสรรค์
+                ผ่านการเชียร์ที่บูรณาการกับวรรณคดีไทย
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ทักษะ -->
+<section class="skills" id="skills">
+    <h2 class="section-title">
+        ทักษะและความสามารถ
+        <span>SKILLS & ABILITIES</span>
+    </h2>
+
+    <div class="skills-box">
+
+        <div class="skill-item">
+            <div class="skill-icon">📖</div>
+            <h3>การอ่านวรรณคดีไทย</h3>
+            <p>มีความสนใจและชื่นชอบการอ่านวรรณคดีและวรรณกรรมไทย</p>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-icon">🎤</div>
+            <h3>การสวดโอ้เอ้วิหารราย</h3>
+            <p>มีความสามารถในการสวดโอ้เอ้วิหารราย</p>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-icon">✍️</div>
+            <h3>การเขียนและแต่งคำประพันธ์</h3>
+            <p>สามารถแต่งคำประพันธ์และเขียนเรียงความได้</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- เป้าหมายในอนาคต -->
+<section id="goal">
+    <h2 class="section-title">
+        เป้าหมายในอนาคต
+        <span>MY FUTURE GOAL</span>
+    </h2>
+
+    <div class="goal-box">
+        <h3>ความฝันในการเป็นครูภาษาไทย</h3>
+
+        <p>
+            เป้าหมายในอนาคตของดิฉันคือการได้เป็นครูภาษาไทย
+            เพราะดิฉันมีความชื่นชอบในภาษาไทยและอยากถ่ายทอดความรู้
+            ให้กับนักเรียน อยากเป็นครูที่ดี คอยสอนและให้คำแนะนำ
+            แก่นักเรียน รวมถึงปลูกฝังให้เด็ก ๆ เห็นคุณค่าและรักภาษาไทย
+            ดิฉันจะตั้งใจศึกษาและพัฒนาตนเองเพื่อทำตามความฝันให้สำเร็จค่ะ
+        </p>
+
+        <div class="quote">
+            "ภาษาไทยคือรากฐานของความเป็นไทย
+            และครูคือผู้ส่งต่อคุณค่าของภาษา"
+        </div>
+    </div>
+</section>
+
+<!-- ท้ายเว็บไซต์ -->
+<footer>
+    <h3>THANK YOU</h3>
+    <p>ขอบพระคุณทุกท่านที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงานของดิฉัน</p>
+    <p>นางสาวนุศรา สถิตย์ | PORTFOLIO</p>
+    <p>มหาวิทยาลัยราชภัฏสุราษฎร์ธานี</p>
+</footer>
+
+</body>
+</html>
